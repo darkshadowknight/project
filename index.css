@@ -1,0 +1,318 @@
+/* Light Mode */
+:root {
+    --base-color: hsl(0, 0%, 67%);
+    --base-variant: #ffffff;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+    --header-color: linear-gradient(to right,rgb(0, 0, 0), rgb(255, 255, 255),rgb(255, 255, 255), hsl(0, 0%, 73%),rgb(0, 0, 0),rgb(0, 0, 0));
+    --boxing-color: rgba(0, 0, 0, 0.5);
+  }
+  
+.darkmode {
+    --base-color: #070b1d;
+    --base-variant: #181818 ;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+    --header-color: linear-gradient(to right,rgb(255, 255, 255), #070b1d,#070b1d, hsl(0, 0%, 73%),rgb(255, 255, 255),rgb(246, 246, 246));    
+    --boxing-color: rgba(0, 0, 0, 0.5);
+ }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 2s ease, color 2s ease;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--base-color);
+    transition: background-color 2s ease, color 2s ease;
+    overflow: auto;
+}
+
+header{
+    outline: none;
+    user-select: none;     
+    -webkit-user-drag: none;
+    background: var(--header-color);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    gap: 30px;
+    box-shadow: 0 15px 10px var(--boxing-color);
+    border-radius: 8px;
+}
+
+main{
+    display: flex;
+    padding: 40px;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+#pic_itachi{
+    width: 70px;
+}
+.first_main {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background: conic-gradient(#480000, #75030337, #400000, #000000);
+}
+
+.sub_main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_containerfortext {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 30px; 
+    padding-top: 20px;
+}
+
+#containerfortext {
+    flex: 1; /* Allows the text to fill the available space */
+    max-width: 600px; /* Prevents text from stretching too much */
+}
+
+footer{
+    width: 100%; 
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.link_home a{
+    text-decoration: none;
+}
+
+#head_text {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--text-color);
+}
+
+.section{
+
+    border-radius: 10px;
+    background-color: var(--base-variant);
+}
+
+.pic_img {
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    padding: 10px;
+    outline: none;
+    user-select: none;     
+    -webkit-user-drag: none;
+}
+
+#text1,#text2,#text3,#text4{
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+    text-align: justify;
+    padding: 20px;
+}
+
+#text_cainta_1,#text_cainta_2,#text_cainta_3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.chibi_naruto1{
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#text_footer{
+    color: var(--text-color);
+}
+
+.text_loc{
+    color: var(--text-color);
+}
+
+#text_p{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 20px;
+}
+#texts_p{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 20px;
+}
+
+.text_location{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(27, 27, 167);
+    gap: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home_btn {
+    border: none;
+    border-radius: 25px;
+    width: 90px;
+    height: 45px;
+    cursor: pointer;
+    background-color: #d3d3d3;
+    transition: background-color 0.3s ease;
+}
+
+.Home_btn:hover {
+    background-color: #b3b3b3;
+}
+
+#them_switch {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode #them_switch .fes:first-child {
+    display: none;
+}
+
+.darkmode #them_switch .fes:last-child {
+    transition: background-color 2s ease, color 2s ease;
+    display: block;
+}
+
+#M_sun {
+    display: none;
+    width: 80px; /* Adjust size if necessary */
+    height: 80px;
+    background: radial-gradient(circle, yellow, orange);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 20px rgba(255, 255, 3, 0.873), 
+        inset -10px -10px 15px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    animation: sunrotation 5s linear infinite;
+}
+
+#M_moon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 40% 40%, #d9d9d9, #a8a8a8 50%, #808080);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 20px rgba(255, 255, 200, 0.3), 
+        inset -10px -10px 15px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    animation: moonrotation 5s linear infinite;
+}
+
+@keyframes moonrotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sunrotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* Particle Animation */
+@keyframes moveParticles {
+    from {
+        transform: translateX(0vw) translateY(0vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-30vw) translateY(20vh);
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: fixed;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    animation: moveParticles linear infinite;
+    opacity: 0;
+}
+
+
+/* Generate multiple particles */
+.particle:nth-child(1) { top: 10%; animation-duration: 4s; animation-delay: 0s; }
+.particle:nth-child(2) { top: 25%; animation-duration: 5s; animation-delay: 1s; }
+.particle:nth-child(3) { top: 40%; animation-duration: 6s; animation-delay: 2s; }
+.particle:nth-child(4) { top: 55%; animation-duration: 4.5s; animation-delay: 1.5s; }
+.particle:nth-child(5) { top: 70%; animation-duration: 5.5s; animation-delay: 2.5s; }
+.particle:nth-child(6) { top: 85%; animation-duration: 6.5s; animation-delay: 3s; }
+
+@media (max-width: 800px) {
+
+    #text {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+}
+@media (max-width: 1280px) and (orientation: landscape) {
+    #M_sun{
+        top: 7%;
+        right: 12.2%;
+
+    }
+    #M_moon{
+        top: 7%;
+        right: 12.2%;
+    }
+    header{
+        padding: 100px;
+    }
+}
+
+@keyframes rotateMoon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
